@@ -38,42 +38,63 @@ const services = [
     title: "Upholstery & Reupholstery",
     description:
       "Bring tired furniture back to life with quality fabrics and tailored, durable work.",
+    image: upholsteryAsset.url,
+    imageAlt:
+      "A freshly reupholstered sofa with deep teal and gold cushions in a warm Kampala living room",
   },
   {
     number: "02",
     title: "Gypsum Works",
     description:
       "Smooth ceilings, feature walls, and clean lines for a polished, finished look.",
+    image: gypsumAsset.url,
+    imageAlt:
+      "A modern living room with a smooth gypsum ceiling and deep teal feature wall",
   },
   {
     number: "03",
     title: "Kitchen & Bedroom Cabinet Installation",
     description:
       "Cabinets measured, fitted, and installed to sit perfectly in place.",
+    image: cabinetsAsset.url,
+    imageAlt:
+      "A fitted kitchen with deep teal lower cabinets, warm wood uppers, and gold handles",
   },
   {
     number: "04",
     title: "Furniture & Fabric Selection",
     description:
       "We help you choose pieces and materials that suit your space and your budget.",
+    image: furnitureFabricAsset.url,
+    imageAlt:
+      "Fabric swatches in deep teal velvet, gold, and cream laid out for selection",
   },
   {
     number: "05",
     title: "Interior Decor",
     description:
       "Styling, layering, and finishing touches that make a room feel complete.",
+    image: interiorDecorAsset.url,
+    imageAlt:
+      "A styled living room with layered cushions, gold vases, plants, and deep teal accents",
   },
   {
     number: "06",
     title: "Interior & Construction Consultation",
     description:
       "Clear, practical advice to guide your build or renovation from start to finish.",
+    image: consultationAsset.url,
+    imageAlt:
+      "A consultation meeting reviewing architectural drawings in a modern office",
   },
   {
     number: "07",
     title: "Commercial Design Executions",
     description:
       "End-to-end delivery of offices, retail spaces, and hospitality interiors that reflect your brand and work beautifully every day.",
+    image: commercialAsset.url,
+    imageAlt:
+      "A modern open-plan commercial office with deep teal walls and gold lighting",
   },
 ];
 
