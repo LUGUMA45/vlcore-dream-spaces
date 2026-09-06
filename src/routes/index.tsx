@@ -213,7 +213,7 @@ function Index() {
             What we do
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold sm:text-4xl">
-            Six services, one seamless finish.
+            Seven services, one seamless finish.
           </h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
