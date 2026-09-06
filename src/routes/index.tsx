@@ -9,6 +9,7 @@ import furnitureFabricAsset from "@/assets/service-furniture-fabric.jpg.asset.js
 import interiorDecorAsset from "@/assets/service-interior-decor.jpg.asset.json";
 import consultationAsset from "@/assets/service-consultation.jpg.asset.json";
 import commercialAsset from "@/assets/service-commercial.jpg.asset.json";
+import renovationImage from "@/assets/service-renovation.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,6 +96,15 @@ const services = [
     image: commercialAsset.url,
     imageAlt:
       "A modern open-plan commercial office with deep teal walls and gold lighting",
+  },
+  {
+    number: "08",
+    title: "Site Renovation",
+    description:
+      "Full site renovations that refresh, repair, and rebuild interiors from structure to final finish.",
+    image: renovationImage,
+    imageAlt:
+      "A home renovation site with workers refinishing walls, deep teal accent wall, and warm wood floors",
   },
 ];
 
@@ -213,7 +223,7 @@ function Index() {
             What we do
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold sm:text-4xl">
-            Seven services, one seamless finish.
+            Eight services, one seamless finish.
           </h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
