@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import logoAsset from "@/assets/vlcore-logo.png.asset.json";
 import heroImage from "@/assets/hero-living-room.jpg";
+import upholsteryAsset from "@/assets/service-upholstery.jpg.asset.json";
+import gypsumAsset from "@/assets/service-gypsum.jpg.asset.json";
+import cabinetsAsset from "@/assets/service-cabinets.jpg.asset.json";
+import furnitureFabricAsset from "@/assets/service-furniture-fabric.jpg.asset.json";
+import interiorDecorAsset from "@/assets/service-interior-decor.jpg.asset.json";
+import consultationAsset from "@/assets/service-consultation.jpg.asset.json";
+import commercialAsset from "@/assets/service-commercial.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,42 +38,63 @@ const services = [
     title: "Upholstery & Reupholstery",
     description:
       "Bring tired furniture back to life with quality fabrics and tailored, durable work.",
+    image: upholsteryAsset.url,
+    imageAlt:
+      "A freshly reupholstered sofa with deep teal and gold cushions in a warm Kampala living room",
   },
   {
     number: "02",
     title: "Gypsum Works",
     description:
       "Smooth ceilings, feature walls, and clean lines for a polished, finished look.",
+    image: gypsumAsset.url,
+    imageAlt:
+      "A modern living room with a smooth gypsum ceiling and deep teal feature wall",
   },
   {
     number: "03",
     title: "Kitchen & Bedroom Cabinet Installation",
     description:
       "Cabinets measured, fitted, and installed to sit perfectly in place.",
+    image: cabinetsAsset.url,
+    imageAlt:
+      "A fitted kitchen with deep teal lower cabinets, warm wood uppers, and gold handles",
   },
   {
     number: "04",
     title: "Furniture & Fabric Selection",
     description:
       "We help you choose pieces and materials that suit your space and your budget.",
+    image: furnitureFabricAsset.url,
+    imageAlt:
+      "Fabric swatches in deep teal velvet, gold, and cream laid out for selection",
   },
   {
     number: "05",
     title: "Interior Decor",
     description:
       "Styling, layering, and finishing touches that make a room feel complete.",
+    image: interiorDecorAsset.url,
+    imageAlt:
+      "A styled living room with layered cushions, gold vases, plants, and deep teal accents",
   },
   {
     number: "06",
     title: "Interior & Construction Consultation",
     description:
       "Clear, practical advice to guide your build or renovation from start to finish.",
+    image: consultationAsset.url,
+    imageAlt:
+      "A consultation meeting reviewing architectural drawings in a modern office",
   },
   {
     number: "07",
     title: "Commercial Design Executions",
     description:
       "End-to-end delivery of offices, retail spaces, and hospitality interiors that reflect your brand and work beautifully every day.",
+    image: commercialAsset.url,
+    imageAlt:
+      "A modern open-plan commercial office with deep teal walls and gold lighting",
   },
 ];
 
@@ -185,22 +213,34 @@ function Index() {
             What we do
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold sm:text-4xl">
-            Six services, one seamless finish.
+            Seven services, one seamless finish.
           </h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.number}
-              className="group rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="mb-5 grid size-12 place-items-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                <span className="font-display text-xl">{service.number}</span>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute left-4 top-4 grid size-10 place-items-center rounded-xl bg-secondary/95 text-sm font-semibold text-primary shadow-sm backdrop-blur-sm transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <span className="font-display">{service.number}</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {service.description}
-              </p>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {service.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
