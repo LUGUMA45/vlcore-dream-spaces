@@ -97,6 +97,15 @@ const services = [
     imageAlt:
       "A modern open-plan commercial office with deep teal walls and gold lighting",
   },
+  {
+    number: "08",
+    title: "Site Renovation",
+    description:
+      "Full site renovations that refresh, repair, and rebuild interiors from structure to final finish.",
+    image: renovationImage,
+    imageAlt:
+      "A home renovation site with workers refinishing walls, deep teal accent wall, and warm wood floors",
+  },
 ];
 
 function Index() {
