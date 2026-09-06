@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import logoAsset from "@/assets/vlcore-logo.png.asset.json";
 import heroImage from "@/assets/hero-living-room.jpg";
+import upholsteryAsset from "@/assets/service-upholstery.jpg.asset.json";
+import gypsumAsset from "@/assets/service-gypsum.jpg.asset.json";
+import cabinetsAsset from "@/assets/service-cabinets.jpg.asset.json";
+import furnitureFabricAsset from "@/assets/service-furniture-fabric.jpg.asset.json";
+import interiorDecorAsset from "@/assets/service-interior-decor.jpg.asset.json";
+import consultationAsset from "@/assets/service-consultation.jpg.asset.json";
+import commercialAsset from "@/assets/service-commercial.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
