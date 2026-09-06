@@ -220,15 +220,27 @@ function Index() {
           {services.map((service) => (
             <article
               key={service.number}
-              className="group rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="mb-5 grid size-12 place-items-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                <span className="font-display text-xl">{service.number}</span>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute left-4 top-4 grid size-10 place-items-center rounded-xl bg-secondary/95 text-sm font-semibold text-primary shadow-sm backdrop-blur-sm transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <span className="font-display">{service.number}</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {service.description}
-              </p>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {service.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
