@@ -9,6 +9,7 @@ import furnitureFabricAsset from "@/assets/service-furniture-fabric.jpg.asset.js
 import interiorDecorAsset from "@/assets/service-interior-decor.jpg.asset.json";
 import consultationAsset from "@/assets/service-consultation.jpg.asset.json";
 import commercialAsset from "@/assets/service-commercial.jpg.asset.json";
+import renovationImage from "@/assets/service-renovation.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
