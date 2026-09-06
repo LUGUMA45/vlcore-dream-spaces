@@ -62,6 +62,12 @@ const services = [
     description:
       "Clear, practical advice to guide your build or renovation from start to finish.",
   },
+  {
+    number: "07",
+    title: "Commercial Design Executions",
+    description:
+      "End-to-end delivery of offices, retail spaces, and hospitality interiors that reflect your brand and work beautifully every day.",
+  },
 ];
 
 function Index() {
